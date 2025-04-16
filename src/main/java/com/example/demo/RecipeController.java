@@ -9,7 +9,13 @@ import java.util.List;
 public class RecipeController {
 
     @GetMapping("/gerichte")
-    public List<String> getGerichte() {
-        return List.of("Pasta Carbonara", "Ratatouille", "Tiramisu", "Spaghetti Bolognese", "Lasagne");
+    public List<Recipe> getGerichte() {
+        return List.of(
+                new Recipe("Pasta Carbonara", "Italienisch", 20),
+                new Recipe("Ratatouille", "Französisch", 45),
+                new Recipe("Tiramisu", "Dessert", 30),
+                new Recipe("Spaghetti Bolognese", "Italienisch", 25),
+                new Recipe("Lasagne", "Italienisch", 40)
+        );
     }
 }
