@@ -15,7 +15,7 @@ public class RecipeController {
                 new Recipe("Ratatouille", "Französisch", 45),
                 new Recipe("Tiramisu", "Dessert", 30),
                 new Recipe("Spaghetti Bolognese", "Italienisch", 25),
-                new Recipe("Lasagne", "Italienisch", 40)
+                new Recipe("Lasagne123", "Italienisch", 40)
         );
     }
 }
