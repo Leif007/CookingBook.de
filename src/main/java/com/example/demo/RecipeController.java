@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*") // ← das fehlt noch!
 @RestController
 public class RecipeController {
 
