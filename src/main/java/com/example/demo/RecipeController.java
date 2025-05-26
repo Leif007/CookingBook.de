@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.web.bind.annotation.CrossOrigin; // ⬅️ wichtig!
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
