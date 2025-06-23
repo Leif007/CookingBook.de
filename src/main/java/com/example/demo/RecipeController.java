@@ -24,4 +24,19 @@ public class RecipeController {
     public Recipe createRecipe(@RequestBody Recipe recipe) {
         return recipeRepository.save(recipe);
     }
+
+    @PutMapping("/{id}")
+    public Recipe updateRecipe(@PathVariable Long id, @RequestBody Recipe updatedRecipe) {
+        return recipeRepository.findById(id).map(recipe -> {
+            recipe.setName(updatedRecipe.getName());
+            recipe.setCategory(updatedRecipe.getCategory());
+            recipe.setCookingTime(updatedRecipe.getCookingTime());
+            return recipeRepository.save(recipe);
+        }).orElseThrow(() -> new RuntimeException("Rezept nicht gefunden mit ID: " + id));
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteRecipe(@PathVariable Long id) {
+        recipeRepository.deleteById(id);
+    }
 }
